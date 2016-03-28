@@ -3,7 +3,7 @@ FROM nginx:latest
 ENTRYPOINT ["/bin/start.sh"]
 EXPOSE 80
 VOLUME /templates
-ENV CONSUL_URL 192.168.99.101:8500
+ENV CONSUL_URL 192.168.99.100:8500
 
 ADD start.sh /bin/start.sh
 RUN chmod +x /bin/start.sh
