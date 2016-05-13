@@ -5,6 +5,9 @@ EXPOSE 80
 VOLUME /templates
 ENV CONSUL_URL 192.168.99.100:8500
 
+
+ADD service.ctmpl /templates/service.ctmpl
+
 ADD start.sh /bin/start.sh
 RUN chmod +x /bin/start.sh
 
@@ -14,4 +17,3 @@ ADD https://github.com/hashicorp/consul-template/archive/v0.7.0.tar.gz /usr/bin/
 
 RUN tar -C /usr/local/bin --strip-components 1 -zxf /usr/bin/v0.7.0.tar.gz
 
-ADD service.ctmpl /templates/service.ctmpl
