@@ -13,7 +13,7 @@ ADD https://releases.hashicorp.com/consul-template/0.14.0/consul-template_0.14.0
 ADD service.ctmpl /templates/service.ctmpl
 
 RUN unzip /usr/bin/consul-template_0.14.0_linux_amd64.zip
-
+RUN chmod +x /usr/bin/consul-template
 
 ADD start.sh /usr/bin/start.sh
 RUN chmod +x /usr/bin/start.sh
