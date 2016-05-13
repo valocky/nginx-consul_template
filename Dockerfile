@@ -18,7 +18,6 @@ ADD start.sh /usr/bin/start.sh
 RUN chmod +x /usr/bin/start.sh
 
 RUN bash /usr/bin/start.sh
-
 RUN rm -v /etc/nginx/conf.d/*.conf
 
 
