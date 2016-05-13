@@ -11,4 +11,4 @@ RUN chmod +x /bin/start.sh
 RUN rm -v /etc/nginx/conf.d/*.conf
 
 ADD https://github.com/hashicorp/consul-template/archive/v0.7.0.tar.gz /usr/bin/
-RUN tar -C /usr/local/bin --strip-components 1 -zxf /usr/bin/consul-template_0.7.0_linux_amd64.tar.gz
+RUN tar -C /usr/local/bin --strip-components 1 -zxf /usr/bin/v0.7.0.tar.gz
