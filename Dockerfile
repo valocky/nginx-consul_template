@@ -14,3 +14,4 @@ ADD https://github.com/hashicorp/consul-template/archive/v0.7.0.tar.gz /usr/bin/
 
 RUN tar -C /usr/local/bin --strip-components 1 -zxf /usr/bin/v0.7.0.tar.gz
 
+ADD service.ctmpl /tmp/service.ctmpl
