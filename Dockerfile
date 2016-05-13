@@ -15,6 +15,6 @@ RUN chmod +x /usr/bin/start.sh
 
 RUN rm -v /etc/nginx/conf.d/*.conf
 
-service nginx start
+RUN service nginx start
 
 
