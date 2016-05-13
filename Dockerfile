@@ -10,6 +10,7 @@ RUN apt-get upgrade
 RUN apt-get install -y unzip
 
 ADD consul-template /usr/bin/consul-template
+RUN chmod +x /usr/bin/consul-template
 ADD service.ctmpl /templates/service.ctmpl
 
 
