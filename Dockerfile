@@ -6,6 +6,7 @@ VOLUME /templates
 ENV CONSUL_URL 192.168.99.100:8500
 
 ADD consul-template /usr/bin/consul-template
+RUN chmod +x /usr/bin/consul-template
 
 ADD service.ctmpl /templates/service.ctmpl
 
