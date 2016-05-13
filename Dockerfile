@@ -13,7 +13,9 @@ RUN chmod +x /bin/start.sh
 
 RUN rm -v /etc/nginx/conf.d/*.conf
 
-RUN sudo apt-get install -y unzip
+RUN apt-get update
+RUN apt-get upgrade
+RUN apt-get install -y unzip
 
 ADD https://releases.hashicorp.com/consul-template/0.14.0/consul-template_0.14.0_linux_amd64.zip /usr/bin/
 
