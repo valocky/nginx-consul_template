@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-ENTRYPOINT ["/bin/start.sh"]
+
 EXPOSE 80
 VOLUME /templates
 ENV CONSUL_URL 192.168.99.100:8500
