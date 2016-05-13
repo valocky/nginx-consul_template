@@ -15,8 +15,8 @@ RUN unzip /usr/bin/consul-template_0.14.0_linux_amd64.zip
 
 ADD service.ctmpl /templates/service.ctmpl
 
-ADD start.sh /bin/start.sh
-RUN chmod +x /bin/start.sh
+ADD start.sh /usr/bin/start.sh
+RUN chmod +x /usr/bin/start.sh
 
 RUN rm -v /etc/nginx/conf.d/*.conf
 
