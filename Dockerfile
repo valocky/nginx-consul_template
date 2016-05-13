@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-ENTRYPOINT ["/usr/bin/start.sh"]
+
 
 EXPOSE 80
 VOLUME /templates
