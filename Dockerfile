@@ -18,13 +18,13 @@ RUN chmod +x /usr/bin/start.sh
 RUN rm -v /etc/nginx/conf.d/*.conf
 
 RUN apt-get update
-RUN apt-get install wget
-RUN apt-get install curl
-RUN apt-get install sudo
+RUN apt-get install -y wget
+RUN apt-get install -y curl
+RUN apt-get install -y sudo
 
-ADD filebeat /filebeat
-ADD filebeat.template.json /filebeat.template.json
-ADD filebeat.yml /filebeat.yml
+ADD filebeat /usr/bin/filebeat
+ADD filebeat.template.json /usr/bin/filebeat.template.json
+ADD filebeat.yml /usr/bin/filebeat.yml
 
 RUN chmod +x /usr/bin/filebeat
 RUN chmod +x /usr/bin/filebeat.template.json
