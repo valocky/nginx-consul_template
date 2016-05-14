@@ -7,8 +7,10 @@ upstream dbnode {
 server {
   listen 80 default_server;
 
+  log_format mycustomformat '$remote_addr $pid-$msec-$remote_addr-$request_length $remote_user [$time_local] "$request" $status $body_bytes_sent "$http_referer" "$http_user_agent"';
+
   error_log /var/log/nginx/error.log warn;
-  access_log /var/log/nginx/nginx-access.log;
+  access_log /var/log/nginx/nginx-access.log mycustomformat;
   charset utf-8;
 
   location / {
