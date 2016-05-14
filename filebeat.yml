@@ -1,0 +1,15 @@
+output:
+  logstash:
+    enabled: true
+    hosts:
+      - 192.168.99.104:5044
+    timeout: 15
+
+filebeat:
+  prospectors:
+ 
+    -
+      paths:
+         - "/var/log/nginx/error.log"
+         - "/var/log/nginx/nginx-access.log"
+      document_type: nginx-access
