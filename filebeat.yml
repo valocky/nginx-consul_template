@@ -10,6 +10,6 @@ filebeat:
  
     -
       paths:
-         - "/var/log/nginx/error.log"
+         
          - "/var/log/nginx/nginx-access.log"
       document_type: nginx-access
