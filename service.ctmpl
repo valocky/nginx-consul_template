@@ -13,5 +13,6 @@ server {
 
   location / {
     proxy_pass http://dbnode;
+    proxy_set_header X-Request-Id $pid-$msec-$remote_addr-$request_length;
   }
 }
