@@ -2,7 +2,7 @@
 
 service nginx start
 
-JSON=`curl -XGET $CONSUL_URL/v1/catalog/service/elk |  jq '.[0].ServiceAddress'`
+JSON=`curl -XGET $CONSUL_URL/v1/catalog/service/elk-9200 |  jq '.[0].ServiceAddress'`
 
 RES="${JSON//\"/}"
 echo $RES
