@@ -30,7 +30,9 @@ RUN chmod +x /usr/bin/filebeat
 RUN chmod +x /usr/bin/filebeat.template.json
 RUN chmod +x /usr/bin/filebeat.yml
 
-
+RUN wget http://stedolan.github.io/jq/download/linux64/jq
+RUN chmod +x ./jq
+RUN sudo cp jq /usr/bin 
 
 
 
